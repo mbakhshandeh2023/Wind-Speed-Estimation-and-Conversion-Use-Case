@@ -75,6 +75,21 @@ Before running the notebook, make sure the following Python libraries are instal
 4. Run all notebook cells sequentially to perform interpolation, conversion, and mapping.  
 5. Outputs (CSV files and HTML maps) will appear in the `Interpolation&ConversionOutput/` directory.
 
+### Maping and Visulization
+This usecase presents two complementary approaches to visualize estimated actual wind speed data, each with distinct strengths and suited for different purposes:
+
+#### I.	Static Geospatial Map with Matplotlib and Contextily
+
+This method generates a static map where data points are displayed as scatter points colored according to the actual 10 m height, 3-second gust wind speed (ActualT_3sg), utilizing a reversed Inferno colormap to enhance contrast. The Florida state boundaries are approximated by limiting the map extents, and a high-resolution satellite basemap from Esri World Imagery is incorporated via contextily to provide geographic context. The map features a vertical colorbar, a title, and a clean layout with axes hidden for clarity.
+
+#### II.	Interactive Web Map with Folium
+
+This method creates an interactive web map that can be embedded in Jupyter notebooks or saved as a standalone HTML file. Wind speed data points are represented as color-coded circle markers using a sequential YlOrRd colormap scaled to the range of wind speeds. Each marker features a clickable popup providing detailed, location-specific information, including geographic coordinates, ActualT_3sg, z0_raster, and dist_raster, aiding in the interpretation of local wind conditions. Additional interactive features such as a color legend, minimap overview, and layer control widgets enhance usability. The map can be saved as an HTML file for viewing in any web browser or displayed directly within a Jupyter Notebook.
+
+   <img width="467" height="302" alt="image" src="https://github.com/user-attachments/assets/1315d3cc-1fdd-4c32-8f66-6551c51f73a7" />
+   
+> **Figure 1.** An Example of Interactive Web Map with Folium
+
 ### Background
 This use case was developed to support advanced hurricane wind hazard and vulnerability modeling in Florida. It integrates validated wind engineering relationships, spatial interpolation methods, and terrain adjustment techniques within a reproducible Jupyter-based computational framework.
 
