@@ -1,8 +1,8 @@
 ## Wind Speed Estimation and Conversion Usecase
 
-Mohammad Bakhshandeh – Florida Institute of Technology  
-Jean-Paul Pinelli – Florida Institute of Technology  
-Steven Cocke – Florida State University  
+### Mohammad Bakhshandeh – Florida Institute of Technology  
+### Jean-Paul Pinelli – Florida Institute of Technology  
+### Steven Cocke – Florida State University  
 
 **Keywords:** hurricane, wind field, interpolation, conversion, exposure correction, Jupyter Notebook, DesignSafe, Florida
 
